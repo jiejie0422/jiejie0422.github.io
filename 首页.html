@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/shoye.css"/>
+		<style type="text/css">
+			* {
+			    padding: 0px;
+			    margin: 0px;
+			    list-style: none;
+			    bottom: 0;
+			    text-decoration: none;
+			}
+			.shoye-box{
+				height: 450px;
+			}
+			.top{
+				width: 1200px;
+				height: 700px;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+				border-radius: 15px;
+				box-shadow: 10px 5px 50px rgba(122, 39, 39, 0.39);
+			}
+			.images {
+			    width: 500%;
+			    height: 100%;
+			    display: flex;
+			    position: absolute;
+			    left: 0;
+			    transition: .2s;
+			}
+			.img {
+			    width: 100%;
+			    background-size: cover;
+			}
+			.img:nth-child(1) {
+			    background-image: url("images/t06.jpg");
+			}
+			
+			.img:nth-child(2) {
+			    background-image: url("images/t03.jpg");
+			}
+			.img:nth-child(3) {
+			    background-image: url("images/t02.jpg");
+			}
+			.img:nth-child(4) {
+			    background-image: url("images/t10.jpg");
+			}
+			.img:nth-child(5) {
+			    background-image: url("images/t09.jpg");
+			}
+			
+			.min {
+			    display: flex;
+			    justify-content: space-evenly;
+			    position: absolute;
+			    bottom: 40px;
+			    width: 30%;
+			    z-index: 999;
+			    left: 50%;
+			    transform: translateX(-50%);
+			}
+			.m {
+			    width: 15px;
+			    height: 15px;
+			    cursor: pointer;
+			    border-radius: 50%;
+			    border: solid rgba(255, 255, 255, 0.5) 5px;
+			    background-color: #fff;
+			}
+			.button {
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    display: flex;
+			    justify-content: space-between;
+			    user-select: none;
+			}
+			.button-left,
+			.button-right {
+			    font-size: 40px;
+			    background-color: rgba(102, 123, 161, 0.288);
+			    padding: 0 10px;
+			    cursor: pointer;
+			    line-height: 700px;
+			    color: #fff;
+			}
+			.zi{
+				width: 50%;
+				height: 100%;
+				float: left;
+				padding: 10px 0 0 30px;
+			}
+			.tu{
+				float: right;
+				padding: 10px 100px 0 0;
+			
+			}
+			.biao{
+				vertical-align: 30%;
+				font-weight: bold;
+				font-size: 250%;
+				color: rgb(70, 100, 180);
+			}
+			p{
+				font-size:130%;
+				text-indent: 2em;
+				color: rgb(70, 100, 180);
+				line-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+        <div class="shell">
+			<div class="box">
+				<a href="登录页面.html">登录</a>
+			</div>
+			<div class="box">
+				<a href="注册页面.html">注册</a>
+			</div>
+        </div>
+    
+		<div id="na">
+			<ul id="nav" name="nav">
+						<li class="slide1"></li>
+						<li class="slide2"></li>
+						<li><a href="首页.html">首页</a></li>
+						<li><a href="成员介绍.html">成员介绍</a></li>
+						<li><a href="名人动态.html">名人动态</a></li>
+						<li><a href="作品集.html">作品展示</a></li>
+						<li><a href="舞台展示.html">舞台展示</a></li>
+					</ul>
+		</div>
+		
+		<div class="top">
+			<ul class="images">
+			    <li class="img"></li>
+			    <li class="img"></li>
+			    <li class="img"></li>
+			    <li class="img"></li>
+			    <li class="img"></li>
+			</ul>
+			<ul class="min">
+			    <li class="m"></li>
+			    <li class="m"></li>
+			    <li class="m"></li>
+			    <li class="m"></li>
+			    <li class="m"></li>
+			</ul>
+			<div class="button">
+			    <div class="button-left">&lt;</div>
+			    <div class="button-right">&gt;</div>
+			</div>
+		</div>
+		
+		
+        <div class="shoye-box">
+			<div class="zi">
+				<img src="images/logo.jpg" width="15%"/>
+				<span class="biao">boystor</span><br /><br /><br /><br />
+				<p>BOY STORY，是JYP Entertainment和 腾讯音娱 合资成立的 新声娱乐（NCC Ent.）于2018年9月21日在中国推出的首支HipHop少年组合，由贾涵予、李梓豪、贺鑫隆、于泽宇、苟明睿、任书漾六位成员组成。</p>
+			</div>
+			<img class="tu" src="images/t05.jpg" width="43%" usemap="#chenyuan"/>
+			<map name="chenyuan" id="chenyuan">
+				<area href="成员介绍.html" shape="rect" coords="160,10,270,150" title="李梓豪"/>
+				<area href="成员介绍.html" shape="rect" coords="160,150,270,290" title="贺鑫隆"/>
+				<area href="成员介绍.html" shape="rect" coords="160,300,300,450" title="苟明睿"/>
+				<area href="成员介绍.html" shape="rect" coords="300,160,400,450" title="于泽宇"/>
+				<area href="成员介绍.html" shape="rect" coords="30,290,300,450" title="任书漾"/>
+				<area href="成员介绍.html" shape="rect" coords="10,120,100,290" title="贾涵予"/>
+			</map>
+		</div>
+		
+		
+		<div class="rwjsbox">
+			<div class="fenkai">
+			<div class="card">
+				<div class="photo">
+					<img src="images/102.jpg" alt=""/>
+				</div>
+				<h1>贾涵予</h1>
+				<h2>岛主/贾宝</h2>
+				<p>我们不会活在别人的评论里，我们就要做我们自己</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			
+			<div class="card">
+				<div class="photo">
+					<img src="images/202.jpg" alt=""/>
+				</div>
+				<h1>李梓豪</h1>
+				<h2>栗子/祺祺</h2>
+				<p>享受当下活在当下才是我的指标</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			
+			<div class="card">
+				<div class="photo">
+					<img src="images/302.jpg" alt=""/>
+				</div>
+				<h1>贺鑫隆</h1>
+				<h2>妲己/隆隆</h2>
+				<p>长大成人还是长成大人</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			</div>
+			<div class="fenkai">
+			<div class="card">
+				<div class="photo">
+					<img src="images/405.jpg" alt=""/>
+				</div>
+				<h1>于泽宇</h1>
+				<h2>公主/小鱼</h2>
+				<p>我能做到的最大努力，就是不断的提升自己</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			
+			<div class="card">
+				<div class="photo">
+					<img src="images/504.png" alt=""/>
+				</div>
+				<h1>苟明睿</h1>
+				<h2>老兵/苟苟</h2>
+				<p>我不在是从前那个我，我依旧是从前的那个我</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			
+			<div class="card">
+				<div class="photo">
+					<img src="images/604.png" alt=""/>
+				</div>
+				<h1>任书漾</h1>
+				<h2>宝宝/数羊</h2>
+				<p>划水是爱豆的大忌</p>
+				<a href="成员介绍.html">了解更多</a>
+			</div>
+			</div>
+		</div>
+		
+		
+		<div>
+			免责申明：本网站为学习用，以上除官方图均未二改。如有问题欢迎私信。
+		</div>
+</body>
+<script>
+
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let m = document.querySelectorAll(".m")
+    let images = document.querySelector(".images")
+    let index = 0
+    let time// 
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    function add() {
+        if (index >= m.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    function desc() {
+        if (index < 1) {
+            index = m.length - 1
+        } else {
+            index--
+        }
+    }
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000)
+    }
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    for (let i = 0; i < m.length; i++) {
+        m[i].addEventListener("click", () => {
+            index = i;
+            position();
+            clearInterval(time)
+            timer()
+        })
+    }
+	
+	
+	
+	
+</script>
+
+</html>

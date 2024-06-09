@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作品集</title>
+		<style type="text/css">
+			.scroll {
+			    width: 100%;
+			    position: relative;
+			    padding: 80px 0;
+			    transition: 0.3s ease 0s;
+			    background-attachment: fixed;
+			    background-size: cover;
+			}
+			
+			.scroll:before {
+				position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+			    background: rgba(99, 99, 99, 0.8);
+			    content: "";
+			}
+			
+			.header {
+				width: 100%;
+			    text-align: center;
+			    margin-bottom: 80px;
+			    position: relative;
+			}
+			
+			.title {
+			    color: #fff;
+			    font-size: 46px;
+			    font-weight: normal;
+			    margin: 0;
+			}
+						
+			.timeline {
+			    display: flex;
+			    margin: 0 auto;
+			    flex-wrap: wrap;
+			    flex-direction: column;
+			    max-width: 700px;
+			    position: relative;
+			}
+						
+			.content-title {
+			    font-weight: normal;
+			    font-size: 50px;
+			    margin: -10px 0 0 0;
+			    transition: 0.4s;
+			    padding: 0 10px;
+			    box-sizing: border-box;
+			    color: #fff;
+			}
+						
+			.content-desc {
+			    margin: 0;
+			    font-size: 15px;
+			    box-sizing: border-box;
+			    color: rgba(255, 255, 255, 0.7);
+			    line-height: 25px;
+			}
+						
+			.timeline:before {
+			    position: absolute;
+			    left: 50%;
+			    width: 2px;
+			    height: 100%;
+			    margin-left: -1px;
+			    content: "";
+			    background: rgba(255, 255, 255, 0.07);
+			}
+						
+			.item {
+			    padding: 40px 0;
+			    opacity: 0.3;
+			    filter: blur(2px);
+			    transition: 0.5s;
+			    box-sizing: border-box;
+			    width: calc(50% - 40px);
+			    display: flex;
+			    position: relative;
+			    transform: translateY(-80px);
+			}
+						
+			.item:before {
+			    content: attr(data-text);
+			    letter-spacing: 3px;
+			    width: 100%;
+			    position: absolute;
+			    color: rgba(255, 255, 255, 0.5);
+			    font-size: 13px;
+			    border-left: 2px solid rgba(255, 255, 255, 0.5);
+			    top: 70%;
+			    margin-top: -5px;
+			    padding-left: 15px;
+			    opacity: 0;
+			    right: calc(-100% - 56px);
+			    font: 900 20px '';
+			    letter-spacing: 5px;
+			}
+						
+			.item:nth-child(even) {
+			    align-self: flex-end;
+			}
+						
+			.item:nth-child(even):before {
+			    right: auto;
+			    text-align: right;
+			    left: calc(-100% - 56px);
+			    padding-left: 0;
+			    border-left: none;
+			    border-right: 2px solid rgba(255, 255, 255, 0.5);
+			    padding-right: 15px;
+			}
+						
+			.item--active {
+			    opacity: 1;
+			    transform: translateY(0);
+			    filter: blur(0px);
+			}
+						
+			.item--active:before {
+			    top: 50%;
+			    transition: 0.3s all 0.2s;
+			    opacity: 1;
+			}
+						
+			.item--active .content-title {
+			    margin: -50px 0 20px 0;
+			}
+						
+			.img {
+			    max-width: 100%;
+			    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+			}
+						
+			.subtitle {
+			    color: rgba(255, 255, 255, 0.5);
+			    font-size: 16px;
+			    letter-spacing: 5px;
+			    margin: 10px 0 0 0;
+			    font-weight: normal;
+			}
+						
+			.footer {
+			    padding: 95px 0;
+			    text-align: center;
+			}
+						
+			.footer a {
+			    color: #999;
+			    display: inline-block;
+			}
+						
+			@media only screen and (max-width: 767px) {
+			    .item {
+			        align-self: baseline !important;
+			        width: 100%;
+			        padding: 0 30px 150px 80px;
+			    }
+						
+			    .item:before {
+			        left: 10px !important;
+			        padding: 0 !important;
+			        top: 50px;
+			        text-align: center !important;
+			        width: 60px;
+			        border: none !important;
+			    }
+						
+			    .item:last-child {
+			        padding-bottom: 40px;
+			    }
+			}
+						
+			@media only screen and (max-width: 767px) {
+			    .timeline:before {
+			        left: 40px;
+			    }
+			}        
+		</style>
+	</head>
+	<body>
+		
+		<div class="scroll" id="scroll">
+			<div class="header">
+				<h2 class="title">BOYSTORY</h2>
+				<h3 class="subtitle">作品集</h3>
+			</div>
+			<div class="timeline">
+				
+				<div class="item" data-text="《HOW OLD R U⟫">
+					<div class="content">
+						<img class="img" src="images/z01.png"/>
+						<h2 class="content-title"><br >2017-09-01</h2>
+						<p class="content-desc">
+							不是我选择舞台而是舞台选择了我，
+							不是我选择音乐而是音乐选择了我
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Can't Stop⟫">
+					<div class="content">
+						<img class="img" src="images/z02.png"/>
+						<h2 class="content-title"><br >2017-12-15</h2>
+						<p class="content-desc">
+							我喜欢在嘻哈的世界里寻找真正的自己，
+							但也更想在现实世界里保护弱小维护正义
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《JUMP UP⟫">
+					<div class="content">
+						<img class="img" src="images/z03.png"/>
+						<h2 class="content-title"><br >2018-03-30</h2>
+						<p class="content-desc">
+							We're about to jump up，世界无法阻挡我骄傲
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Handz Up⟫">
+					<div class="content">
+						<img class="img" src="images/z04.png"/>
+						<h2 class="content-title"><br >2018-06-12</h2>
+						<p class="content-desc">
+							Keep it Real  努力才能冲破浓雾
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Enough⟫">
+					<div class="content">
+						<img class="img" src="images/z05.png"/>
+						<h2 class="content-title"><br >2018-09-21</h2>
+						<p class="content-desc">
+							不用刻意模仿本就不同模样，全心全意诠释Our real story
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《奇妙里⟫">
+					<div class="content">
+						<img class="img" src="images/z18.png"/>
+						<h2 class="content-title"><br >2018-10-21</h2>
+						<p class="content-desc">
+							带着想象空间 好奇感觉 开启一场华丽表演
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《For U⟫">
+					<div class="content">
+						<img class="img" src="images/z06.png"/>
+						<h2 class="content-title"><br >2018-11-22</h2>
+						<p class="content-desc">
+							For U 
+							For BOSS 
+							For Forever 
+							BOYSTORY X BOSS 
+							这是一首专属于我们的歌
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Oh My Gosh⟫">
+					<div class="content">
+						<img class="img" src="images/z07.png"/>
+						<h2 class="content-title"><br >2019-03-29</h2>
+						<p class="content-desc">
+							想做音乐榜单上的常住户,
+							成长必修课不会因此疏忽
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Too Busy⟫">
+					<div class="content">
+						<img class="img" src="images/z08.png"/>
+						<h2 class="content-title"><br >2019-07-26</h2>
+						<p class="content-desc">
+							录音室里我们记录的故事，在你的耳机里面跟你说清楚，想做个大人物，你必须刻苦。
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《I=U=WE: 序⟫">
+					<div class="content">
+						<img class="img" src="images/z09.png"/>
+						<h2 class="content-title"><br >2020-01-06</h2>
+						<p class="content-desc">
+							当你坚持不住请你看看我,
+							我是在你心里眼里永不灭的火,
+							当我坚持不住请你陪着我,
+							当然就算走了这也不是你的错
+							——《序；告白》
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《I=U=WE: 我⟫">
+					<div class="content">
+						<img class="img" src="images/z10.png"/>
+						<h2 class="content-title"><br >2020-11-27</h2>
+						<p class="content-desc">
+							就算我陷在一个无止境的迷宫，有倔强的心脏就有恃无恐
+							——先行曲《苦甜(Bitter Sweet)》
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《听我说⟫">
+					<div class="content">
+						<img class="img" src="images/z11.png"/>
+						<h2 class="content-title"><br >2021-05-09</h2>
+						<p class="content-desc">
+							用最真挚的曲调 
+							用最认真的话语 
+							传递对母亲的爱
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《I=U=WE: 你⟫">
+					<div class="content">
+						<img class="img" src="images/z13.png"/>
+						<h2 class="content-title"><br >2021-8-20</h2>
+						<p class="content-desc">
+							你就是你自己的主宰
+							——主打曲《做你自己（Be Urself）》
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《WE⟫">
+					<div class="content">
+						<img class="img" src="images/z14.png"/>
+						<h2 class="content-title"><br >2022-8-15</h2>
+						<p class="content-desc">
+							用回忆织的花肆意绽放吧
+							——《约定（All about WE）》
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《友友⟫">
+					<div class="content">
+						<img class="img" src="images/z16.png"/>
+						<h2 class="content-title"><br >2023-01-01</h2>
+						<p class="content-desc">
+							幻想要多久才能独当一面，
+							炙热的勇气，已经上线
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《哈?!(What's Poppin)⟫">
+					<div class="content">
+						<img class="img" src="images/z15.png"/>
+						<h2 class="content-title"><br >2023-04-28</h2>
+						<p class="content-desc">
+							尽情对我笑 反正这儿你达不到 
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Yes Day⟫">
+					<div class="content">
+						<img class="img" src="images/z20.png"/>
+						<h2 class="content-title"><br >2023-06-30</h2>
+						<p class="content-desc">
+							满怀热情与希望的青春，奔赴梦想的热情，
+							少年人勇往直前，奔跑不停歇～ 
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Z.I.P(Zero Is the only Passion)⟫">
+					<div class="content">
+						<img class="img" src="images/z17.png"/>
+						<h2 class="content-title"><br >2023-07-28</h2>
+						<p class="content-desc">
+							We gon' start New B Gneration
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《極⟫">
+					<div class="content">
+						<img class="img" src="images/t05.jpg"/>
+						<h2 class="content-title"><br >2024-03-04</h2>
+						<p class="content-desc">
+							对立面都被撕碎吗，
+							Now who's the real Alpha
+							——《Alpha》
+						</p>
+					</div>
+				</div>
+				
+				<div class="item" data-text="《Gummy Candy Love⟫">
+					<div class="content">
+						<img class="img" src="images/z19.png"/>
+						<h2 class="content-title"><br >2024-05-31</h2>
+						<p class="content-desc">
+							Sweet like honey，
+							心跳加速 adrenaline，
+							Feels like magic，
+							Sugar rush 每一根神经
+						</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<script >
+					  let selectors = {
+					    id: document.querySelector("#scroll"),
+					    item: document.querySelectorAll("#scroll .item"),
+					    activeClass: "item--active",
+					    img: ".img"
+					  };
+					  // 将第一个时间轴项目激活，并设置时间轴背景图片为第一个项目的图片
+					  selectors.item[0].classList.add(selectors.activeClass);
+					  selectors.id.style.backgroundImage = `url(${selectors.item[0].querySelector(selectors.img).getAttribute("src")})`;
+					  // 获取时间轴项目的总数
+					  let timeLength = selectors.item.length;
+					  // 当页面滚动时触发滚动事件
+					  window.addEventListener("scroll", function () {
+					    let max, min;
+					    // 获取页面滚动距离
+					    let pos = window.scrollY;
+					    selectors.item.forEach(function (item, i) {
+					      // 获取当前时间轴项目的最小和最大高度
+					      min = item.offsetTop;
+					      max = item.offsetHeight + item.offsetTop;
+					      // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
+					      // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
+					      if (i === timeLength - 2 && pos > min + item.offsetHeight / 2) {
+					        selectors.item.forEach(function (item) {
+					          item.classList.remove(selectors.activeClass);
+					        });
+					        selectors.id.style.backgroundImage = `url(${selectors.item[timeLength - 1].querySelector(selectors.img).getAttribute("src")})`;
+					        selectors.item[timeLength - 1].classList.add(selectors.activeClass);
+					      }
+					      // 如果当前滚动位置在当前项目的最小和最大高度之间
+					      // 则将当前项目设置为激活状态，并设置背景图片为当前项目的图片
+					      else if (pos <= max - 10 && pos >= min) {
+					        selectors.id.style.backgroundImage = `url(${item.querySelector(selectors.img).getAttribute("src")})`;
+					        selectors.item.forEach(function (item) {
+					          item.classList.remove(selectors.activeClass);
+					        });
+					        item.classList.add(selectors.activeClass);
+					      }
+					    });
+					  });
+		</script>
+	</body>
+</html>
