@@ -1,0 +1,80 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: linear-gradient( 45deg,#8dc8e8,#e3c8d8);
+	background-attachment: fixed;
+}
+.login-box{
+	width: 400px;
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	margin: 100px auto;
+}
+.login-box h2{
+	margin:0 0 30px;
+	padding:0;
+	color: #333333;
+	text-align: center;
+}
+.login-box  .user-box{
+	position: relative;
+	margin-bottom: 30px;
+}
+.login-box .user-box input{
+	width: 100%;
+	padding: 10px 0;
+	font-size:16px;
+	color: #333333;
+	border:none;
+	border-bottom:1px solid #999 ;
+	outline: none;
+	background: transparent;
+}
+.login-box .user-box label{
+	position: absolute;
+	top:0;
+	left:0;
+	padding:10px 0;
+	font-size:16px;
+	color: #999 ;
+	pointer-events:none;
+	transition: 0.5s;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:focus ~ label{
+	top:-20px;
+	left:0;
+	color: #8dc8e8;
+	font-size:12px;
+}
+.login-box button{
+	display:block;
+	width:100%;
+	background:#8dc8e8;
+	color: #fff ;
+	border:none;
+	outline: none; 
+	padding: 15px;
+	font-size:18px;
+	border-radius:5px;
+	cursor:pointer;
+	transition:0.5s;
+}
+.signup-box button:hover{
+	background:#2f9768;
+}
+.signup-box.login-link{
+	margin-top:20px;
+	text-align:center;
+	font-size:16px;
+	color:#666666;
+}
+.signup-box.login-link a{
+	color: #42b983;
+	text-decoration:none;
+}
+.signup-box.login-link a:hover{
+	text-decoration:underline;
+}

@@ -1,0 +1,85 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	background: linear-gradient( 45deg,#8dc8e8,#e3c8d8);
+	background-attachment: fixed;
+	background-size: cover;
+}
+div{
+	border: 0px solid #000000;
+	margin: 0px;
+}
+
+.shell{
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+}
+.box{
+	width: 25%;
+	height: 100%;
+	text-align: center;
+}
+.box a{
+	display: block;
+	color: #3d405b;
+	font-size: 16px;
+	line-height: 50px;
+	transition: .2s;
+	text-decoration: none;
+}
+.box a:hover{
+	color: #f4f1de;
+}
+
+#na{
+	width: 840px;
+	margin: 100px auto;
+}
+
+#nav{
+	position: relative;
+	border: none;
+	border-radius: 10em;
+	display: flex;
+	list-style: none;
+	background: #f5f5f5;
+	box-shadow: 20px 40px 40px #00000033;
+	padding: 10px;
+}
+
+#nav li a{
+	position: relative;
+	padding: 15px 37px;
+	font: 500 24px "黑体";
+	border: none;
+	outline: none;
+	color: rgb(70, 100, 180);
+	display: inline-block;
+	text-decoration: none;
+	z-index: 3;
+}
+
+#nav li a:hover{
+	color: rgb(227, 139, 189);
+}
+
+.shoye-box{
+	width: 1200px;
+	background: #ffffff;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	margin: 100px auto;
+}
+
+
